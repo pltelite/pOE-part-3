@@ -54,7 +54,7 @@ public class MessageApp {
         }
 
         users.add(new User(username, password, phone));
-        System.out.println("✅ Registered successfully.");
+        System.out.println(" Registered successfully.");
     }
 
     static boolean loginUser() {
@@ -67,12 +67,12 @@ public class MessageApp {
         for (User u : users) {
             if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
                 currentUser = u;
-                System.out.println("✅ Login successful. Welcome, " + currentUser.getUsername());
+                System.out.println(" Login successful. Welcome, " + currentUser.getUsername());
                 return true;
             }
         }
 
-        System.out.println("❌ Login failed.");
+        System.out.println(" Login failed.");
         return false;
     }
 
@@ -139,7 +139,7 @@ public class MessageApp {
         messageHashes.add(m.getHash());
         messageIDs.add(m.getId());
 
-        System.out.println("✅ Message processed.");
+        System.out.println(" Message processed.");
     }
 
     static void viewSentMessages() {
@@ -187,7 +187,7 @@ public class MessageApp {
             Message m = it.next();
             if (m.getHash().equals(hash)) {
                 it.remove();
-                System.out.println("✅ Message deleted: " + m.getMessage());
+                System.out.println(" Message deleted: " + m.getMessage());
                 return;
             }
         }
